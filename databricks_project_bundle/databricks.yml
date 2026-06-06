@@ -15,6 +15,8 @@ variables:
     description: The schema to use
   warehouse_id:
     description: WarehouseID
+  spn_id:
+    description: spn id
   
 
 targets:
@@ -31,8 +33,10 @@ targets:
       catalog: first_project
       schema: dev
       warehouse_id: 50ce076b0628663d
+      spn_id: 7980ba12-b132-49f5-90f9-5d249471207d
     presets:
       artifacts_dynamic_version: true
+    
   prod:
     mode: production
     workspace:
@@ -43,6 +47,7 @@ targets:
       catalog: first_project_prod
       schema: prod
       warehouse_id: 50ce076b0628663d
+      spn_id: 7980ba12-b132-49f5-90f9-5d249471207d
     permissions:
       - user_name: 289ipsita289@gmail.com
         level: CAN_MANAGE
